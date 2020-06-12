@@ -10,7 +10,7 @@ class MyWindow(QtWidgets.QWidget):
 		super(MyWindow, self).__init__(parent)
 
 		# setting title 
-		self.setWindowTitle("Python ") 
+		self.setWindowTitle("CSV Viewer") 
   
 		# setting geometry 
 		self.setGeometry(100, 100, 800, 600) 
@@ -41,7 +41,7 @@ class MyWindow(QtWidgets.QWidget):
 	def openFileNameDialog(self):
 		options = QFileDialog.Options()
 		options |= QFileDialog.DontUseNativeDialog
-		fileName, _ = QFileDialog.getOpenFileName(self,"QFileDialog.getOpenFileName()", "","Comma Separated Value Files (*.csv)", options=options)
+		fileName, _ = QFileDialog.getOpenFileName(self,"Please Choose a CSV File!", "","Comma Separated Value Files (*.csv)", options=options)
 		if fileName:
 			self.clear_table()
 			self.loadCsv(fileName)
