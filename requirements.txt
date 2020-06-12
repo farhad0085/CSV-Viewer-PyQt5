@@ -1,1 +1,4 @@
-pyqt5
+altgraph==0.17
+PyInstaller==3.6
+PyQt5==5.15.0
+PyQt5-sip==12.8.0
